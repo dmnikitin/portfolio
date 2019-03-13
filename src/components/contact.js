@@ -21,7 +21,7 @@ export default class Contact extends Component {
                           }
                       };   
 
-   		fetch('https://cors.io/?https://still-plateau-46646.herokuapp.com/', myInit);
+   		fetch('https://stormy-chamber-60382.herokuapp.com/', myInit);
 		setTimeout( () => {send = true; this.forceUpdate()} , 1000);
 	}	
 
