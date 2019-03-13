@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import './sass/styles.scss';
-import Infobar from './components/infobar/infobar.js';
-import Works from './components/mainbox/works.js';
-import About from './components/mainbox/about.js';
-import Contact from './components/mainbox/contact.js';
+import Works from './components/works.js';
+import About from './components/about.js';
+import Contact from './components/contact.js';
 
 export default class Root extends Component {
 
@@ -20,7 +19,7 @@ export default class Root extends Component {
 			    	<div className="main">
 												
 						{mainbox}	
-						<div className="footer"> © vasiliy utkin, 2018-2019 </div>	
+						<div className="footer"> © dmitry nikitin, 2018-2019 </div>	
 					</div>		
 			);
 	}

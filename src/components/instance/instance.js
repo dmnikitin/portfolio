@@ -23,7 +23,7 @@ export default class Instance extends Component {
 					</div>	
 
 					<div className={content2}> 
-						<a href ="" target="_blank">Try it!</a>
+						<a href ={this.props.content.link} target="_blank"><h5>Try it!</h5></a>
 					</div>
 				</div>					
 				<img className={image}/>		

@@ -1,46 +1,161 @@
-@mixin bar {
-    background-color: white;
-    border: 1.5px solid $color-light;
-    border-radius: 10px;
-}
+@mixin pageTop($page) {
 
-@mixin textarea($area, $font-size, $margintop, $height) {
-    grid-area: $area;
-    height: $height;
-    font-size: $font-size;
-    margin-top: $margintop;
-    overflow: hidden;
-    border: none;
-    box-sizing: border-box;
-    word-break: break-all;
-    outline: none;
-    background: white; 
-    color: $color-bold;
-    padding: 15px 20px 20px 10px;
-}
+    .#{$page} {
 
-@mixin multiLineEllipsis($lineHeight: 1.2em, $lineCount: 1) {
-    overflow: hidden;
-    position: relative;
-    line-height: $lineHeight;
-    max-height: $lineHeight * $lineCount;
-    text-align: justify;
-    margin-right: -1em;
-    padding-right: 1em;
 
-    &:before {
-        content: '...';
-        position: absolute;
-        right: 0;
-        bottom: 0;
+        font-family: 'Work Sans', sans-serif;
+        display: grid;
+        grid-template-rows: 30% 70%;
+        text-align: justify;
+
+        .#{$page}-top {
+            background: #7A7A7A;
+            color: white;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            max-height: 274.5px;
+        }
+
+        .#{$page}-text {
+            grid-row-start: 2;
+            display: grid;
+            grid-template-columns: 55.5% 44.5%;
+            color: white;
+            opacity: 1;
+            height: auto;
+
+            .#{$page}-minimized,
+            .#{$page}-minimized-modal {
+                display: none;
+            }
+
+            .#{$page}-name {
+
+                display: flex;
+                height: 100%;
+
+                div {
+                    font-size: 68px;
+                    display: inline-block;
+                    width: 100%;
+                    align-self: flex-end;
+                    text-align: right;
+                    padding-right: 20px;
+                }
+            }
+
+            .#{$page}-links {
+
+                font-size: 34px;
+                display: grid;
+                grid-template-rows: 80% 20%;
+
+                div {
+                    color: #BCB8AD;
+                    line-height: 20px;
+                    padding-left: 20px;
+
+
+                    &:hover {
+                        color: black;
+                    }
+
+                    &:nth-child(1) {
+
+                        width: max-content;
+                        margin-bottom: 10px;
+                        display: flex;
+                        align-self: flex-end;
+                    }
+
+                    &:nth-child(2) {
+
+                        width: max-content;
+                        margin-bottom: 17px;
+                        display: flex;
+                        align-self: flex-end;
+                    }
+
+                }
+            }
+
+        }
+
     }
 
-    &:after {
-        content: '';
-        position: absolute;
-        right: 0;
-        width: 1em;
-        height: 1em;
-        margin-top: 0.2em;
+
+    @media (min-width: 600px) and (max-width: 850px) {
+
+        .#{$page}-text {
+
+            grid-template-columns: 58.5% 41.5% !important;
+        }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+        .#{$page} {
+
+
+
+            .#{$page}-text {
+                text-align: center;
+                grid-template-columns: 5fr 1fr;
+
+
+                .#{$page}-minimized {
+                    font-size: 40px;
+                    display: inline-block;
+                    width: 100%;
+                    align-self: flex-end;
+                    padding-right: 10%;
+                    padding-bottom: 8px;
+                    color: #d4d6d8;
+                    &:hover {
+                        color: white;
+                    }
+                }
+
+                .#{$page}-minimized-modal {
+
+                    display: block;
+                    position: absolute;
+                    font-size: 36px;
+                    width: 100%;
+                    height: 28.5%;
+                    background: #7A7A7A;                    
+
+                    h3 {
+                        font-weight: normal;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        height: 33%;
+                        &:nth-child(1) {
+                            padding-top: 40px;
+                        }                       
+                    }
+
+                    span {
+                        height: 33%;
+                        width: 100%;
+                    }
+                }
+
+                .#{$page}-name {
+                    div {
+                        font-size: 56px;
+                        text-align: center;
+                        padding-right: 0px;
+                    }
+                }
+
+                .#{$page}-links {
+                    display: none;
+                }
+            }
+        }
+
     }
 }
