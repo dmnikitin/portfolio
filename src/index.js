@@ -6,6 +6,12 @@ import About from './components/about.js';
 import Contact from './components/contact.js';
 
 export default class Root extends Component {
+	
+	componentDidMount() {
+		fetch('https://js-weather-2019.herokuapp.com');
+		fetch('https://react-news-2019.herokuapp.com');
+		fetch('https://stormy-chamber-60382.herokuapp.com');
+	}
 
 	state = {displayed: "about"}
 
