@@ -21,7 +21,7 @@ export default class Contact extends Component {
                           }
                       };   
 
-   		fetch('https://stormy-chamber-60382.herokuapp.com/', myInit);
+   		fetch('https://stormy-chamber-60382.herokuapp.com/message', myInit);
 		setTimeout( () => {send = true; this.forceUpdate()} , 1000);
 	}	
 
