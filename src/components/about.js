@@ -35,11 +35,11 @@ const About = (props) =>
 								<div className="rect-text">
 									<Zoom left duration={2000} delay={2500}><h3> I'm Dima, a web developer from Minsk, Belarus </h3>	</Zoom>									
 									<Zoom left duration={2000} delay={4000}><p>	 Here are my skills& competences. <br /> 
-									 Frontend: React, Redux, JavaScript/ES6, HTML5, CSS3, jQuery, SASS, JEST, webpack and more;) 
+									 Frontend: React, Redux, JavaScript/ES6, HTML5, CSS3, jQuery, SASS, JEST etc. 
 									 <br/>
-									 Backend: NodeJs, express, firebase
+									 Backend: NodeJs, express 
 									 <br/>
-							 		 Other: AJAX, git, SQL, mongoDB etc.
+							 		 Other: webpack, AJAX, git, firebase, SQL, mongoDB etc.
 							 		 <br/>							 		 
 									 I'm currently open for remote opportunities.
 									</p></Zoom>	

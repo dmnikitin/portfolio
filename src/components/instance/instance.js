@@ -18,7 +18,7 @@ export default class Instance extends Component {
 				<div className="micro"> 
 					<div className={content1}>
 						<h3>{this.props.content.name}</h3>
-						<h5> {this.props.content.technologies.map(e=> e + " " ) }</h5>
+						<h5> {this.props.content.technologies.map(e=> e + "   " ) }</h5>
 						<h5> {this.props.content.features}</h5>
 					</div>	
 

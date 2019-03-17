@@ -8,8 +8,8 @@ import Contact from './components/contact.js';
 export default class Root extends Component {
 	
 	componentDidMount() {
-		fetch('https://js-weather-2019.herokuapp.com');
-		fetch('https://react-news-2019.herokuapp.com');
+		fetch('https://js-weather-2019.herokuapp.com/loadserver');
+		fetch('https://react-news-2019.herokuapp.com/loadserver');
 		fetch('https://stormy-chamber-60382.herokuapp.com');
 	}
 

@@ -15,7 +15,7 @@
   },
   "scripts": {
     "dev": "webpack-dev-server --open",
-    "build": "webpack --mode production",
+    "build": "webpack --mode production & webpack-dev-server --open",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
@@ -24,7 +24,6 @@
   "license": "ISC",
   "homepage": "https://github.com/dmnikitin/portfolio",
   "dependencies": {
-    "create-react-app": "^2.1.8",
     "gh-pages": "^2.0.1",
     "proptypes": "^1.1.0",
     "react": "^16.5.2",

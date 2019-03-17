@@ -127,33 +127,85 @@ $imgpath: '/images';
                 height: 100%;
                 transition: all 1s ease-out;
                 transform: scale(1.01);
-                background: url(#{$imgpath}/#{$i}.jpg) no-repeat center center;
+                // background: url(#{$imgpath}/#{$i}.jpg) no-repeat center center;
+                background: url(https://dmnikitin.github.io/portfolio/images/#{$i}.jpg) no-repeat center center;
                 background-size: auto 100%;
             }
         }
     }
 }
 
-@media (max-width: 700px) {
 
-    .works-main {
+@media (max-width: 500px) {
+        
+        .works-main {
 
-        grid-template-columns: 1fr 1fr;
-        grid-row-gap: 1em;
+        margin: 0 auto;
+        width: 80%;
+         grid-template-columns: 1fr 1fr;
+         grid-template-rows: repeat(3, 200px);
+         grid-row-gap: 1em;
+
+
+        .micro {
+            display: grid;
+            height: 100%;
+            grid-template-rows: 125px 75px;
+        }  
+
 
         .hover-content {
 
             h3 {
-                font-size: 30px !important;
+                font-size: 15px !important;
+            }
+
+            h5 {
+                font-size: 8px;
+            }
+        }
+        .instance-buttons {
+            h5 {
+                font-size: 15px !important;
+                width: 80% !important;
+            }
+        }
+    }
+
+}
+
+
+@media (min-width: 500px) and (max-width: 700px) {
+
+    .works-main {
+
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 1em;
+
+        .micro {
+            display: grid;
+            height: 100%;
+            grid-template-rows: 200px 50px;
+        }   
+
+        .hover-content {
+
+            h3 {
+                font-size: 20px !important;
+            }
+
+            h5 {
+                font-size: 12px;
             }
         }
 
 
-        .react-reveal {
-            border-top: 20px solid #7a7a7a;
-            border-bottom: 20px solid #7a7a7a;
-
-        }
+        .instance-buttons {
+            h5 {
+                font-size: 15px !important;
+                width: 80% !important;
+            }
+        }     
     }
 }
 
@@ -165,22 +217,56 @@ $imgpath: '/images';
         grid-row-gap: 1em;
     }
 
+    
+        .micro {
+            display: grid;
+            height: 100%;
+            grid-template-rows: 200px 75px !important;
+        }   
+
+        .hover-content {
+
+            h3 {
+                font-size: 25px !important;
+            }
+
+            h5 {
+                font-size: 13px !important;
+            }
+        }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+
+     .micro {
+            display: grid;
+            height: 100%;
+            grid-template-rows: 350px 100px !important;
+        }  
+
     .hover-content {
 
         h3 {
             font-size: 30px !important;
         }
+        h5 {
+                font-size: 15px !important;
+            }
     }
+
 }
 
 
-@media (min-width: 900px) and (max-width: 1300px) {
+@media (min-width: 1200px) and (max-width: 1400px) {
 
     .hover-content {
 
         h3 {
             font-size: 30px !important;
         }
+        h5 {
+                font-size: 15px !important;
+            }
     }
 
 }
