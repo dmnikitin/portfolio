@@ -168,7 +168,7 @@
         .about-main-rect {
             border: none;
             display: block;
-            height: 90%;
+            height: 70%;
             z-index: 0;
 
             .rect-right {
@@ -196,13 +196,31 @@
         }
 
         .about-info {
-            display: block;
-            position: absolute;
-            top: 70%;
-            left: 40%;
-            width: 100%;
-            background: inherit;
-            h5 {font-size: 16px;}
+            height: 20%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            // display: block;
+            // position: absolute;
+            // top: 70%;
+           
+            // width: 100%;
+            // background: inherit;
+            padding-left: 10%;
+     
+            h5 {
+                padding-left: 10px;
+               text-align: center;
+               display: inline-block;
+                // width: max-content;
+                font-size: 18px;
+                color: #7A7A7A ;
+            }
+            a {
+                h5 {
+                    font-weight: bold;
+                    color: black;}
+            }
         }
     }
 

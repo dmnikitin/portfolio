@@ -130,7 +130,7 @@ $imgpath: '/images';
                 // background: url(#{$imgpath}/#{$i}.jpg) no-repeat center center;
                 background: url(https://dmnikitin.github.io/portfolio/images/#{$i}.jpg) no-repeat center center;
                 background-size: auto 100%;
-            }
+            }           
         }
     }
 }
@@ -153,6 +153,16 @@ $imgpath: '/images';
             grid-template-rows: 125px 75px;
         }  
 
+       
+        @for $i from 1 through 9 {
+            .instance-#{$i} {         
+                &:active {
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
 
         .hover-content {
 
@@ -186,7 +196,9 @@ $imgpath: '/images';
             display: grid;
             height: 100%;
             grid-template-rows: 200px 50px;
-        }   
+        }  
+
+    
 
         .hover-content {
 
