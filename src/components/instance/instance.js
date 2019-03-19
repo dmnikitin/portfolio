@@ -13,7 +13,7 @@ export default class Instance extends Component {
 		let content2 = this.state.hover ? ` enabled-2 instance-buttons` : `disabled-2 instance-buttons`;
 		return (		
 		
-			<div className = {this.props.name} onMouseEnter  ={this.toggleHover} onMouseLeave ={this.toggleHover}> 
+			<div className = {this.props.name} onClick= {this.toggleHover} onMouseEnter  ={this.toggleHover} onMouseLeave ={this.toggleHover}> 
 				<div className="bg-image-blur"></div>
 				<div className="micro"> 
 					<div className={content1}>

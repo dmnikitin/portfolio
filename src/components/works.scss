@@ -153,17 +153,6 @@ $imgpath: '/images';
             grid-template-rows: 125px 75px;
         }  
 
-       
-        @for $i from 1 through 9 {
-            .instance-#{$i} {         
-                &:active {
-                    img {
-                        display: none;
-                    }
-                }
-            }
-        }
-
         .hover-content {
 
             h3 {
