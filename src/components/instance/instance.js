@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import {withGetScreen} from 'react-getscreen';
 
-export default class Instance extends Component {
+ class Instance extends Component {
 
-	state = {hover: false}
+	state = {hover: false, clicked: false}
 
-	toggleHover = () => setTimeout ( () => this.setState({hover: !this.state.hover}), 0)
-
+	toggleHover = () => setTimeout ( () =>  !this.props.isMobile() ? this.setState({hover: !this.state.hover}) : null , 0)
+	toggleClick = () => setTimeout ( () =>  this.props.isMobile() ? this.setState({hover: !this.state.clicked}) : null , 0)
 	render() {	
 		
 		let image = this.state.hover ? "opened" : "closed";
@@ -13,7 +14,7 @@ export default class Instance extends Component {
 		let content2 = this.state.hover ? ` enabled-2 instance-buttons` : `disabled-2 instance-buttons`;
 		return (		
 		
-			<div className = {this.props.name} onClick= {this.toggleHover} onMouseEnter  ={this.toggleHover} onMouseLeave ={this.toggleHover}> 
+			<div className = {this.props.name} onClick={this.toggleClick} onMouseEnter={this.toggleHover} onMouseLeave ={this.toggleHover}> 
 				<div className="bg-image-blur"></div>
 				<div className="micro"> 
 					<div className={content1}>
@@ -32,3 +33,6 @@ export default class Instance extends Component {
 		}
 	
 }
+
+const options = {mobileLimit: 500}
+export default withGetScreen(Instance, options);
