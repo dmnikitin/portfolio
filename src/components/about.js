@@ -4,9 +4,14 @@ import Zoom from 'react-reveal/Zoom';
 import Bounce from 'react-reveal/Bounce';
 import Link from './link.js';
 import Bars from "./bars.js";
+import {withGetScreen} from 'react-getscreen';
 
-const About = (props) => 
-					<div className="about">					
+
+
+const About = (props) => { 
+	let delayedEntrance = props.isMobile() ? 1000 : 5000;
+
+				return	<div className="about">					
 						<Bounce duration={2000} left>
 							<div className="about-top">
 								<div className="about-text">
@@ -51,7 +56,7 @@ const About = (props) =>
 								<div></div>
 								<div></div>
 								<div></div> 
-								<Zoom left duration={2000} delay={5000}>
+								<Zoom left duration={2000} delay={delayedEntrance}>
 									<div className="about-info-txt"> 
 										<h5>feel free to check out my </h5>
 										 <a><u><Link tag="h5" direction = "works" changePage={props.changePage}></Link></u> </a>
@@ -66,6 +71,7 @@ const About = (props) =>
 						</div>	
 						</Zoom>						
 					</div>
+}
 
-export default About;
-
+const options = {mobileLimit: 500}
+export default withGetScreen(About, options);
