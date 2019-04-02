@@ -39,15 +39,13 @@ const About = (props) => {
 								<Zoom left duration={2000} delay={1000}><div className="rect-name"><h2>welcome to my page!</h2></div></Zoom>	
 								<div className="rect-text">
 									<Zoom left duration={2000} delay={2500}><h3> I'm Dima, a web developer from Minsk, Belarus </h3>	</Zoom>									
-									<Zoom left duration={2000} delay={4000}><p>	 Here are my skills& competences. <br /> 
-									 Frontend: React, Redux, JavaScript/ES6, HTML5, CSS3, jQuery, SASS, JEST etc. 
+									<Zoom left duration={2000} delay={4000}><p>	 <b>Here are my skills & competences.</b> <br /> 
+									 <b>Frontend:</b> React, Redux, JavaScript/ES6, HTML5, CSS3, jQuery, SASS, Jest & Enzyme  
 									 <br/>
-									 Backend: NodeJs, express 
+									 <b>Backend:</b> NodeJs, express 
 									 <br/>
-							 		 Other: webpack, AJAX, git, firebase, SQL, mongoDB etc.
-							 		 <br/>							 		 
-									 I'm currently open for remote opportunities.
-									</p></Zoom>	
+							 		 <b>Other:</b> webpack, AJAX, git, firebase, SQL(MySQL), NOSQL(MongoDB)
+							 		 </p></Zoom>	
 								</div>														
 							</div>					
 							<div className="about-main-black"></div>							
@@ -62,7 +60,7 @@ const About = (props) => {
 										 <a><u><Link tag="h5" direction = "works" changePage={props.changePage}></Link></u> </a>
 										 <h5>and leave me a message!</h5>
 										 <a><u><Link tag="h5" direction = "contacts" changePage={props.changePage}></Link></u> </a>
-
+										 <h5>I'm currently open for remote opportunities.</h5>
 								   </div></Zoom>
 								<div></div>
 							</div>							

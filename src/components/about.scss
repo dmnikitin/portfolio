@@ -5,7 +5,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 3fr 2fr 1fr 3fr;
-    grid-template-rows: 1fr 4fr 2fr;
+    grid-template-rows: 20% 60% 20%;
     text-align: justify;
 
     .about-info {
@@ -60,7 +60,7 @@
         .rect-text {
             position: absolute;
             left: 10%;
-            top: 5%;
+            top: 3%;
             z-index: 1;
 
             h3 {
@@ -69,14 +69,17 @@
             }
 
             p {
-                width: 70%;
-                padding-left: 20%;
-                padding-top: 3%;
+                border: 1px solid ;                
+                width: 65%;               
+                position:relative;
+              
+                left: 20%;            
+                padding: 1em ; 
                 color: #7A7A7A;
                 opacity: 1;
-                text-align:justify;
+                text-align: left;
                 font-family: Montserrat;
-                margin: 0;
+                margin: 0;             
             }
         }
 
@@ -134,8 +137,7 @@
 @media (min-width: 600px) and (max-width: 850px) {
 
     .about-main {
-        grid-template-columns: 1fr 2fr 1fr 1fr;
-        grid-template-rows: 1fr 4fr 1fr !important;
+        grid-template-columns: 1fr 2fr 1fr 1fr;       
 
         .rect-name {
 
@@ -190,6 +192,8 @@
                 p{
                      width: 85%; 
                    padding-left: 0 ;
+                   left: 0;
+                   border: none;
 
                 }            
             }

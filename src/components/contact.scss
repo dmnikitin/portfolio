@@ -4,7 +4,7 @@
 .contacts-main {
     background: #BCB8AD;
     display: grid;
-    grid-template-rows: 7fr 1fr;
+    grid-template-rows: 1fr 70px;
     grid-row-gap: 1em;
 
     .contacts-info {
@@ -23,9 +23,9 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             text-align: center;
-            position: relative;
-            top: 40%;
-        }
+             position: relative;
+            padding-top: 12px;
+            }
 
         .fa {
             &:hover {
@@ -58,7 +58,7 @@ form {
 
     textarea {
         resize: none;
-        height: 65%;
+        height: 75%;
     }
 
     input[type="submit"] {
