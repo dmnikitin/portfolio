@@ -1,8 +1,6 @@
 @mixin pageTop($page) {
 
     .#{$page} {
-
-
         font-family: 'Work Sans', sans-serif;
         display: grid;
         grid-template-rows: 30% 70%;
@@ -30,10 +28,8 @@
             }
 
             .#{$page}-name {
-
                 display: flex;
                 height: 100%;
-
                 div {
                     font-size: 68px;
                     display: inline-block;
@@ -45,66 +41,43 @@
             }
 
             .#{$page}-links {
-
                 font-size: 34px;
                 display: grid;
                 grid-template-rows: 80% 20%;
-
-                div {
+                button, div {
                     color: #BCB8AD;
-                    line-height: 20px;
                     padding-left: 20px;
-
+                    font-size: 34px;
+                    font-family: 'Work Sans', sans-serif;
+                    font-weight: lighter;
+                    background: transparent;
+                    border: none;     
+                    display: flex;
+                    justify-content: left;     
+                    align-items: flex-end;
 
                     &:hover {
                         color: black;
+                        cursor: pointer;
                     }
-
-                    &:nth-child(1) {
-
-                        width: max-content;
-                        margin-bottom: 10px;
-                        display: flex;
-                        align-self: flex-end;
-                    }
-
-                    &:nth-child(2) {
-
-                        width: max-content;
-                        margin-bottom: 17px;
-                        display: flex;
-                        align-self: flex-end;
-                    }
-
                 }
             }
-
         }
-
     }
 
 
     @media (min-width: 600px) and (max-width: 850px) {
-
         .#{$page}-text {
-
             grid-template-columns: 58.5% 41.5% !important;
         }
-
     }
-
 
     @media (max-width: 600px) {
 
         .#{$page} {
-
-
-
             .#{$page}-text {
                 text-align: center;
                 grid-template-columns: 5fr 1fr;
-
-
                 .#{$page}-minimized {
                     font-size: 40px;
                     display: inline-block;
@@ -117,7 +90,6 @@
                         color: white;
                     }
                 }
-
                 .#{$page}-minimized-modal {
 
                     display: block;
@@ -125,8 +97,7 @@
                     font-size: 36px;
                     width: 100%;
                     height: 28.5%;
-                    background: #7A7A7A;                    
-
+                    background: #7A7A7A;
                     h3 {
                         font-weight: normal;
                         margin-top: 0;
@@ -136,13 +107,11 @@
                             padding-top: 40px;
                         }                       
                     }
-
                     span {
                         height: 33%;
                         width: 100%;
                     }
                 }
-
                 .#{$page}-name {
                     div {
                         font-size: 56px;
@@ -156,6 +125,5 @@
                 }
             }
         }
-
     }
 }
