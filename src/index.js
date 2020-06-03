@@ -16,7 +16,7 @@ export default class Root extends Component {
 		fetch('https://cryptic-sierra-45688.herokuapp.com/');
 	}
 
-	state = {displayed: works}
+	state = {displayed: about}
 
 	changePage = (value) => this.setState({displayed: value})
 
