@@ -1,6 +1,13 @@
 @import '../sass/mixins.scss';
 @include pageTop(contacts);
 
+
+.contacts {
+    @media (max-width: 1270px) {     
+        height: 915px;
+    }
+}
+
 .contacts-main {
     background: #BCB8AD;
     display: grid;

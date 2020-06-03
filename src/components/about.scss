@@ -1,6 +1,12 @@
 @import '../sass/mixins.scss';
 @include pageTop(about);
 
+.about {
+    @media (max-width: 1270px) {     
+        height: 915px;
+    }
+}
+
 .about-main {
     height: 100%;
     display: grid;
@@ -186,15 +192,13 @@
             }
 
             .rect-text {
-                padding-top: 10%; 
-               
+                padding-top: 10%;
 
-                p{
-                     width: 85%; 
+                p {
+                   width: 85%; 
                    padding-left: 0 ;
                    left: 0;
                    border: none;
-
                 }            
             }
         }
@@ -204,19 +208,12 @@
             display: grid;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
-            // display: block;
-            // position: absolute;
-            // top: 70%;
-           
-            // width: 100%;
-            // background: inherit;
             padding-left: 10%;
      
             h5 {
                 padding-left: 10px;
                text-align: center;
                display: inline-block;
-                // width: max-content;
                 font-size: 18px;
                 color: #7A7A7A ;
             }

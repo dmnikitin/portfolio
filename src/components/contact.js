@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Link from "./link.js";
 import Bars from "./bars.js";
 import Fade from 'react-reveal/Fade';
-import Flip from 'react-reveal/Flip';
 let send = false;
 
 export default class Contact extends Component {
