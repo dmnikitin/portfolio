@@ -43,28 +43,7 @@ $imgpath: '/images';
         flex-wrap: wrap;
         justify-content: center;
         align-content: space-between;
-
-        &:last-child {
-            width: 35%;
-            .react-reveal {
-                border-top: 20px solid #7a7a7a;
-                border-bottom: 20px solid #7a7a7a;
-                height: 40%;
-
-                @media (min-width: 1000px) and (max-width: 1270px) {
-                   height: 91%;
-                }
-
-                @media (min-width: 750px) and (max-width: 1000px) {
-                    height: 70%;
-                }
-
-                @media (max-width: 750px) {
-                    height: 200px;
-                }
-            }
-        }    
-
+        
         &:first-child {            
 
             .react-reveal {
@@ -84,6 +63,32 @@ $imgpath: '/images';
                 }
             }        
         }
+
+        &:last-child {
+            width: 35%;
+            @media (min-width: 1270px) {
+                width: 34%;
+             }
+
+            .react-reveal {
+                border-top: 20px solid #7a7a7a;
+                border-bottom: 20px solid #7a7a7a;
+                height: 40%;
+
+                @media (min-width: 1000px) and (max-width: 1270px) {
+                   height: 91%;
+                }
+
+                @media (min-width: 750px) and (max-width: 1000px) {
+                    height: 70%;
+                }
+
+                @media (max-width: 750px) {
+                    height: 200px;
+                }
+            }
+        }    
+
     }
 
     @for $i from 1 through 3 {
