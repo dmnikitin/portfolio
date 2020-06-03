@@ -1,4 +1,3 @@
-
 @import '../components/works.scss';
 @import '../components/about.scss';
 @import '../components/contact.scss';
@@ -29,6 +28,10 @@ body {
     position: relative;
     display: grid;
     grid-template-rows: 915px 50px;
+
+    @media (max-width: 1270px) {
+        grid-template-rows: auto 50px;
+    }
     
     a {      
         text-decoration: none;
