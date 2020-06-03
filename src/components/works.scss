@@ -2,124 +2,167 @@ $imgpath: '/images';
 @import '../sass/mixins.scss';
 @include pageTop(works);
 
+.works {
+    @media (min-width: 1000px) and (max-width: 1270px) {
+        margin-bottom: 20px;
+        height: 1050px;
+    }
+
+    @media (min-width: 750px) and (max-width: 1000px) {
+        margin-bottom: 20px;
+        height: 100vw;
+    }
+
+    @media (max-width: 750px) {
+        height: 1000px;
+    }
+}
 
 .works-main {
-    display: grid;
+
     padding-top: 5%;
     padding-right: 5%;
     padding-bottom: 50px;
     padding-left: 5%;
     background: #f3f3f3;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    justify-content: center;
 
-    .react-reveal {
-        border-top: 20px solid #7a7a7a;
-        border-bottom: 20px solid #7a7a7a;
+    @media (min-width: 750px) and (max-width: 1000px) {
+        height: 700px;
+    }
+
+    @media (max-width: 750px) {
+        height: 1500px;
     }
 
 
-    .micro {
-        display: grid;
-        height: 100%;
-        grid-template-rows: 2fr 1fr;
-    }
+    &-part {
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-between;
 
+        &:last-child {
+            width: 35%;
+            .react-reveal {
+                border-top: 20px solid #7a7a7a;
+                border-bottom: 20px solid #7a7a7a;
+                height: 40%;
 
-    .opened {
-        opacity: .1;
-    }
-
-    .closed {
-        opacity: .5;
-    }
-
-    .enabled {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-
-    .disabled {
-        transform: translateY(-20%);
-        opacity: 0;
-    }
-
-    .enabled-2 {
-        transform: translateY(0%);
-        opacity: 1;
-    }
-
-    .disabled-2 {
-        transform: translateY(20%);
-        opacity: 0;
-    }
-
-    .hover-content {
-        display: grid;
-        transition: 350ms linear;
-        text-align: center;
-        grid-template-rows: 1fr 1fr 1fr;
-
-        h3,
-        h5 {
-            margin: 0;
-            padding: 5px;
-        }
-
-        h3 {
-            font-size: 40px;
-            margin-block-start: .67em;
-            margin-block-end: .67em;
-            margin-inline-start: 0;
-            margin-inline-end: 0;
-        }
-
-        h5 {
-            font-family: 'Montserrat Alternates', sans-serif;
-            font-size: 17px;
-            color: #7a7a7a;
-        }       
-    }
-
-
-    .instance-buttons {
-        z-index: 10;
-        margin: 0;
-        padding: 10px;
-        transition: 350ms linear;
-
-        a {
-       
-            
-
-            h5 {
-                border: 1px solid black;
-                 color: #7a7a7a;
-                  width: 30%;
-                  text-align: center;
-                  margin: 0 auto;
-                  font-size: 25px;
-                 &:hover {
-                    color: black;
+                @media (min-width: 1000px) and (max-width: 1270px) {
+                   height: 91%;
                 }
-            }          
-            
-            
+
+                @media (min-width: 750px) and (max-width: 1000px) {
+                    height: 70%;
+                }
+
+                @media (max-width: 750px) {
+                    height: 200px;
+                }
+            }
+        }    
+
+        &:first-child {            
+
+            .react-reveal {
+                border-top: 20px solid #7a7a7a;
+                border-bottom: 20px solid #7a7a7a;
+                height: 92.4%;
+                @media (min-width: 1000px) and (max-width: 1270px) {
+                    height: 80%;
+                }
+
+                @media (min-width: 750px) and (max-width: 1000px) {
+                    height: 80%;
+                }
+
+                @media (max-width: 750px) {
+                    height: 300px;
+                }
+            }        
         }
     }
 
-
-
-    @for $i from 1 through 9 {
+    @for $i from 1 through 3 {
         .instance-#{$i} {
-
             position: relative;
             overflow: hidden;
             height: 100%;
-            vertical-align: middle;
             background-color: #f3f3f3;
+            width: 18vw;
+            max-width: 300px;
+
+            @media (min-width: 1000px) and (max-width: 1270px) {
+                width: 100%;
+            }
+
+            @media (min-width: 750px) and (max-width: 1000px) {
+                width: 100%;
+                max-width: 225px;
+            }
+
+            @media (max-width: 750px) {
+                width: 100%;
+                max-width: 300px;
+            }
 
             img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                transition: all 1s ease-out;
+                transform: scale(1.01);
+                // background: url(#{$imgpath}/#{$i}.jpg) no-repeat center center;
+                background: url(https://dmnikitin.github.io/portfolio/images/#{$i}.jpg) no-repeat center center;
+                background-size: auto 100%;
+            }           
+        }
+    }
 
+    @for $i from 4 through 9 {
+        .instance-#{$i} {
+
+            position: relative;
+            overflow: hidden;           
+            background-color: #f3f3f3;
+            max-width: 200px;
+            height: 100%;
+
+            @media (min-width: 1000px) and (max-width: 1270px) {                
+                width: 100%;
+                max-width: 225px;
+            }
+            @media (min-width: 750px) and (max-width: 1000px) {              
+                width: 100%;
+                max-width: 170px;
+            }
+            @media (max-width: 750px) {                
+                width: 100%;
+                max-width: 150px;
+            }
+
+            .hover-content {
+                h3 {
+                    font-size: 20px;
+                }
+                h5 {
+                    font-size: 14px;
+                }
+            }
+
+            .instance-buttons {
+                button {
+                    width: 50%;
+                    font-size: 20px;
+                }
+            }
+
+            img {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -135,139 +178,120 @@ $imgpath: '/images';
     }
 }
 
+.micro {
+        display: grid;
+        height: 100%;
+        grid-template-rows: 2fr 1fr;
+    }
 
-@media (max-width: 500px) {
-        
-        .works-main {
 
+.opened {
+    opacity: 0.09;
+}
+
+.closed {
+    opacity: 0.5;
+}
+
+.enabled {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.disabled {
+    transform: translateY(-20%);
+    opacity: 0;
+}
+
+.enabled-2 {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.disabled-2 {
+    transform: translateY(20%);
+    opacity: 0;
+}
+
+.hover-content {
+    transition: 350ms linear;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    h3,
+    h5 {
+        margin: 0;
+        padding: 5px;
+    }
+
+    h3 {
+        font-size: 40px;
+        margin-block-start: .67em;
+        margin-block-end: .67em;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
+    }
+
+    h5 {
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-size: 17px;
+        color: #7a7a7a;
+    }       
+}
+
+
+.instance-buttons {
+    z-index: 10;
+    margin: 0;
+    padding: 10px;
+    transition: 350ms linear;
+    display: flex;
+
+    button {
+        border: none;
+        background: transparent;
+        width: 30%;
+        height: max-content;
+        text-align: center;
         margin: 0 auto;
-        width: 80%;
-         grid-template-columns: 1fr 1fr;
-         grid-template-rows: repeat(3, 200px);
-         grid-row-gap: 1em;
-
-
-        .micro {
-            display: grid;
-            height: 100%;
-            grid-template-rows: 125px 75px;
-        }  
-
-        .hover-content {
-
-            h3 {
-                font-size: 15px !important;
-            }
-
-            h5 {
-                font-size: 8px;
-            }
-        }
-        .instance-buttons {
-            h5 {
-                font-size: 15px !important;
-                width: 80% !important;
-            }
-        }
+        font-size: 25px;
     }
 
+    a {
+        &:hover {
+            color: black;
+            cursor: pointer;
+        }  
+    }
 }
 
+.button-link {
+    animation: sparkle 2s linear infinite; 
+}
 
-@media (min-width: 500px) and (max-width: 700px) {
+@keyframes sparkle {
+    0% {           
+        opacity: 1;
+    }
+    50% {           
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
+@media (max-width: 1270px) {
     .works-main {
+        flex-direction: column;
+        justify-content: space-around;
 
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-row-gap: 1em;
+        &-part {
+            &:last-child {
 
-        .micro {
-            display: grid;
-            height: 100%;
-            grid-template-rows: 200px 50px;
-        }  
-
-    
-
-        .hover-content {
-
-            h3 {
-                font-size: 20px !important;
-            }
-
-            h5 {
-                font-size: 12px;
+                width: 100%;
             }
         }
-
-
-        .instance-buttons {
-            h5 {
-                font-size: 15px !important;
-                width: 80% !important;
-            }
-        }     
     }
-}
-
-@media (min-width: 700px) and (max-width: 900px) {
-
-    .works-main {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-row-gap: 1em;
-    }
-
-    
-        .micro {
-            display: grid;
-            height: 100%;
-            grid-template-rows: 200px 75px !important;
-        }   
-
-        .hover-content {
-
-            h3 {
-                font-size: 25px !important;
-            }
-
-            h5 {
-                font-size: 13px !important;
-            }
-        }
-}
-
-@media (min-width: 900px) and (max-width: 1200px) {
-
-     .micro {
-            display: grid;
-            height: 100%;
-            grid-template-rows: 350px 100px !important;
-        }  
-
-    .hover-content {
-
-        h3 {
-            font-size: 30px !important;
-        }
-        h5 {
-                font-size: 15px !important;
-            }
-    }
-
-}
-
-
-@media (min-width: 1200px) and (max-width: 1400px) {
-
-    .hover-content {
-
-        h3 {
-            font-size: 30px !important;
-        }
-        h5 {
-                font-size: 15px !important;
-            }
-    }
-
 }
