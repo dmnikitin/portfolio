@@ -6,5 +6,4 @@ const Link =  (props) =>  {
 	return <TagName props={props} onClick={()=> setPage(props.direction)} children={props.direction}/>
 } 
 
-export default Link
-
+export default Link;
