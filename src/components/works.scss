@@ -2,89 +2,93 @@ $imgpath: '/images';
 @import '../sass/mixins.scss';
 @include pageTop(works);
 
-.works {
-    @media (min-width: 1000px) and (max-width: 1270px) {
-        margin-bottom: 20px;
-        height: 1050px;
-    }
-
-    @media (min-width: 750px) and (max-width: 1000px) {
-        margin-bottom: 20px;
-        height: 100vw;
-    }
-
-    @media (max-width: 750px) {
-        height: 1000px;
-    }
-}
-
-.works-main {
-
-    padding-top: 5%;
-    padding-right: 5%;
-    padding-bottom: 50px;
-    padding-left: 5%;
+.works-main {   
     background: #f3f3f3;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
+    padding: 5%;
 
-    @media (min-width: 750px) and (max-width: 1000px) {
-        height: 700px;
+    @media (min-width: 1000px) and (max-width: 1270px) {
+        height: 850px;
+        padding: 0 5%;
     }
 
-    @media (max-width: 750px) {
-        height: 1500px;
+    @media (min-width: 750px) and (max-width: 1000px) {        
+        height: 750px;
+        padding: 0 5%;
     }
 
+    @media (max-width: 1270px) {       
+        flex-direction: column;
+    }
 
     &-part {
         
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: space-between;
+        display: flex;        
         
-        &:first-child {            
+        &:first-child {      
+            
+            @media (max-width: 750px) {                
+                flex-direction: column;
+            }
 
             .react-reveal {
                 border-top: 20px solid #7a7a7a;
                 border-bottom: 20px solid #7a7a7a;
-                height: 92.4%;
-                @media (min-width: 1000px) and (max-width: 1270px) {
-                    height: 80%;
-                }
-
-                @media (min-width: 750px) and (max-width: 1000px) {
-                    height: 80%;
-                }
+                width: calc(100%/3);
+                margin-bottom: 50px;
+               
+                @media (min-width: 1270px) {
+                    margin-bottom: 0;
+                }             
 
                 @media (max-width: 750px) {
-                    height: 300px;
+                    width: 80%;
+                    height: 40vh;
+                    margin: 0 auto;
                 }
             }        
         }
 
         &:last-child {
-            width: 35%;
-            @media (min-width: 1270px) {
-                width: 34%;
+            
+            @media (min-width: 1270px) and (max-width: 1520px) {
+                width: 30%;
+                flex-direction: column;
+                flex-flow: wrap;
              }
+
+             @media (min-width: 1520px) {
+                width: 25%;
+                flex-direction: column;
+                flex-flow: wrap;
+             }
+
+             @media (max-width: 750px) {
+                width: 80%;
+                margin: 0 auto;
+                flex-direction: row;
+                flex-flow: wrap;
+            }
 
             .react-reveal {
                 border-top: 20px solid #7a7a7a;
-                border-bottom: 20px solid #7a7a7a;
-                height: 40.5%;
+                border-bottom: 20px solid #7a7a7a;             
+
+                @media (min-width: 750px) {
+                    width: 50%;
+                }              
 
                 @media (min-width: 1000px) and (max-width: 1270px) {
-                   height: 92.4%;
+                   width: calc(100%/4);
                 }
 
-                @media (min-width: 750px) and (max-width: 1000px) {
-                    height: 70%;
+                @media (min-width: 750px) and (max-width: 1000px) {                   
+                    width: calc(100%/4);
                 }
 
                 @media (max-width: 750px) {
-                    height: 200px;
+                    width: 50%;
                 }
             }
         }    
@@ -95,24 +99,8 @@ $imgpath: '/images';
         .instance-#{$i} {
             position: relative;
             overflow: hidden;
-            height: 100%;
             background-color: #f3f3f3;
-            width: 18vw;
-            max-width: 300px;
-
-            @media (min-width: 1000px) and (max-width: 1270px) {
-                width: 100%;
-            }
-
-            @media (min-width: 750px) and (max-width: 1000px) {
-                width: 100%;
-                max-width: 225px;
-            }
-
-            @media (max-width: 750px) {
-                width: 100%;
-                max-width: 300px;
-            }
+            height:100%;          
 
             img {
                 position: absolute;
@@ -131,32 +119,21 @@ $imgpath: '/images';
 
     @for $i from 4 through 9 {
         .instance-#{$i} {
-
             position: relative;
             overflow: hidden;           
             background-color: #f3f3f3;
-            max-width: 200px;
             height: 100%;
-
-            @media (min-width: 1000px) and (max-width: 1270px) {                
-                width: 100%;
-                max-width: 225px;
-            }
-            @media (min-width: 750px) and (max-width: 1000px) {              
-                width: 100%;
-                max-width: 170px;
-            }
-            @media (max-width: 750px) {                
-                width: 100%;
-                max-width: 150px;
-            }
-
+            
             .hover-content {
                 h3 {
                     font-size: 20px;
                 }
                 h5 {
-                    font-size: 14px;
+                    font-size: 13px;
+                    font-weight: bolder;
+                }
+                h6 {
+                    font-size: 12px;
                 }
             }
 
@@ -184,10 +161,14 @@ $imgpath: '/images';
 }
 
 .micro {
-        display: grid;
-        height: 100%;
+    display: grid;
+    height: 100%;
+    grid-template-rows: 70% 30%;
+
+    @media (min-width: 1000px) and (max-width: 1270px) {
         grid-template-rows: 2fr 1fr;
     }
+}
 
 
 .opened {
@@ -204,7 +185,7 @@ $imgpath: '/images';
 }
 
 .disabled {
-    transform: translateY(-20%);
+    transform: translateY(-30%);
     opacity: 0;
 }
 
@@ -214,7 +195,7 @@ $imgpath: '/images';
 }
 
 .disabled-2 {
-    transform: translateY(20%);
+    transform: translateY(30%);
     opacity: 0;
 }
 
@@ -223,6 +204,9 @@ $imgpath: '/images';
     text-align: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0 auto;
 
     h3,
     h5 {
@@ -242,7 +226,13 @@ $imgpath: '/images';
         font-family: 'Montserrat Alternates', sans-serif;
         font-size: 17px;
         color: #7a7a7a;
-    }       
+    }      
+
+    h5 {
+        // font-family: 'Montserrat Alternates', sans-serif;
+        font-size: 15px;
+        color: #7a7a7a;
+    }  
 }
 
 
@@ -256,7 +246,7 @@ $imgpath: '/images';
     button {
         border: none;
         background: transparent;
-        width: 30%;
+        width: 50%;
         height: max-content;
         text-align: center;
         margin: 0 auto;
@@ -284,19 +274,5 @@ $imgpath: '/images';
     }
     100% {
         opacity: 1;
-    }
-}
-
-@media (max-width: 1270px) {
-    .works-main {
-        flex-direction: column;
-        justify-content: space-around;
-
-        &-part {
-            &:last-child {
-
-                width: 100%;
-            }
-        }
     }
 }

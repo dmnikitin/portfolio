@@ -19,7 +19,7 @@ import {withGetScreen} from 'react-getscreen';
 					<div className={content1}>
 						<h3> {this.props.content.name} </h3>
 						<h5> {this.props.content.technologies.map(e=> e + "   " ) } </h5>
-						<h5> {this.props.content.features} </h5>
+						<h6> {this.props.content.features} </h6>
 					</div>
 					<div className={content2}>
 						<button className="button-link"><a href={this.props.content.link} target="_blank">Try it!</a></button>
