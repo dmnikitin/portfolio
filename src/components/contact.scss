@@ -3,8 +3,13 @@
 
 
 .contacts {
-    @media (max-width: 1270px) {     
+   
+    @media (min-width: 750px) and (max-width: 1270px) {     
         height: 915px;
+    }
+
+    @media (max-width: 750px) {     
+        height: 680px;
     }
 }
 
@@ -13,6 +18,11 @@
     display: grid;
     grid-template-rows: 1fr 70px;
     grid-row-gap: 1em;
+    height: 650px;
+
+    @media (max-width: 750px) {     
+        height: 415px;
+    }
 
     .contacts-info {
 
@@ -21,6 +31,7 @@
         background: #F3F3F3;
         color: #7A7A7A;
         width: 80%;
+        max-width: 600px;
         margin: 0 auto;
         margin-bottom: 1em;
         box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
@@ -45,6 +56,8 @@
 form {
 
     width: 80%;
+    max-width: 600px;
+  
     margin: 0 auto;
     margin-top: 1em;
     background: #F3F3F3;

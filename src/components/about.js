@@ -34,9 +34,9 @@ const About = ({ changePage, isMobile }) => {
 					<div className="rect-right"></div>								
 					<Zoom left duration={2000} delay={1000}><div className="rect-name"><h2>welcome to my page!</h2></div></Zoom>	
 					<div className="rect-text">
-						<Zoom left duration={2000} delay={2500}><h3> I'm Dima, a web developer from Minsk, Belarus </h3>	</Zoom>									
+						<Zoom left duration={2000} delay={2500}><h3> I'm Dima, web developer from Minsk, Belarus </h3>	</Zoom>									
 						<Zoom left duration={2000} delay={4000}><p>	 <b>Here are my skills & competences.</b> <br /> 
-							Angular, React, Redux, Javascript/Typescript, NodeJs, Express, HTML5, CSS3, SASS 
+							Javascript/Typescript, Angular, React, Redux, NodeJs, Express, HTML5, CSS3, SASS 
 							<br/>
 							webpack, AJAX, git, MongoDB 
 							</p></Zoom>	
@@ -50,11 +50,8 @@ const About = ({ changePage, isMobile }) => {
 					<div></div> 
 					<Zoom left duration={2000} delay={delayedEntrance}>
 						<div className="about-info-txt"> 
-							<h5>feel free to check out my </h5>
-								<a><u><Link tag="h5" direction = "works" changePage={changePage}></Link></u> </a>
-								<h5>and leave me a message!</h5>
-								<a><u><Link tag="h5" direction = "contacts" changePage={changePage}></Link></u> </a>
-								<h5>I'm currently open for remote opportunities.</h5>
+							<h5>feel free to check out my <a><u><Link tag="button" direction = "works" changePage={changePage}></Link></u> </a> </h5>
+							<h5>and leave me a message!  <a><u><Link tag="button" direction = "contacts" changePage={changePage}></Link></u> </a></h5>								
 						</div></Zoom>
 					<div></div>
 				</div>							
