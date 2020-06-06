@@ -1,7 +1,7 @@
 export const projectsList1 = [
 	{ index: 1, name: "CULTURE PORTAL", features: "Team project, web portal about famous film directors from Belarus", technologies: ["Angular"], link: "https://romantic-yonath-91b28d.netlify.com/main", github:"https://github.com/PoMaKoM/Culture-Portal_Team5"},
     { index: 2, name: "YOUTUBE CLIENT", features: "Youtube client with authentication feauture", technologies: ["Angular, NodeJS, MongoDB"], link: "https://cryptic-sierra-45688.herokuapp.com/", github:"https://github.com/dmnikitin/angular-youtube-client"},
-    { index: 3, name: "WEATHER FORECAST", features: "Weather forecast for selected location", technologies: ["NodeJS"], link: "https://pure-shelf-01620.herokuapp.com/ ", github:"https://github.com/dmnikitin/js-weather-mvc"},
+    { index: 3, name: "WEATHER FORECAST", features: "Weather forecast for selected location", technologies: ["NodeJS"], link: "https://young-anchorage-74520.herokuapp.com/ ", github:"https://github.com/dmnikitin/js-weather-mvc"},
 ];
 
 export const projectsList2 = [

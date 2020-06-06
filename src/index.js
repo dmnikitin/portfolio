@@ -11,7 +11,7 @@ const { works, about, contacts } = state;
 export default class Root extends Component {
 	
 	componentDidMount() {
-		fetch('https://pure-shelf-01620.herokuapp.com/ ');
+		fetch('https://young-anchorage-74520.herokuapp.com/');
 		fetch('https://react-news-2019.herokuapp.com/loadserver');
 	}
 
