@@ -13,6 +13,7 @@ export default class Root extends Component {
 	componentDidMount() {
 		fetch('https://young-anchorage-74520.herokuapp.com/');
 		fetch('https://react-news-2019.herokuapp.com/loadserver');
+		fetch('https://cryptic-sierra-45688.herokuapp.com/');
 	}
 
 	state = {displayed: about}
